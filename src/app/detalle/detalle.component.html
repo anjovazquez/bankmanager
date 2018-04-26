@@ -1,0 +1,30 @@
+<div *ngIf="infos">
+    <div class="list-item" *ngFor="let info of infos">
+        <div class="customer-info">
+            <p><b>Nombre: </b><input type="text" [(ngModel)]="info.SURNAME"/></p>
+            <p><b>Apellidos: </b><input type="text" [(ngModel)]="info.NAME"/></p>
+            <p><b>E-mail: </b><input type="text" [(ngModel)]="info.EMAIL"/></p>
+            <p><b>Dirección: </b><input type="text" [(ngModel)]="info.ADDRESS"/></p>
+            <p><b>DNI: </b><input type="text" [(ngModel)]="info.ID"/></p>
+            <p><b>Fecha de salida: </b><input type="text" [(ngModel)]="info.STARTDATE"/></p>
+            <p><b>Tipo de cliente: </b><input type="text" [(ngModel)]="info.CUSTOMERTYPEID" /></p>
+            <p><b>Info: </b><input type="text" [(ngModel)]="info.ID_DMS_DOC"/></p>
+        </div>
+        <div class="customer-pic">
+            <img src="data:image/png;base64,{{info.PHOTO}}" alt="Avatar" class="avatar" >
+        </div>
+        <div class="comments">
+            <p><b>Comentarios: </b><input type="text" [(ngModel)]="info.COMMENTS"/></p>
+        </div>
+
+        <div class="list-accounts" *ngFor="let infoAccount of infoAccounts">
+            <p>{{infoAccount.ACCOUNTID}}, {{infoAccount.ENTITYID}}, {{infoAccount.OFFICEID}}, {{infoAccount.CDID}}, {{infoAccount.ANID}}, {{infoAccount.ACCOUNT}}</p>
+            <p>{{infoAccount.BALANCE}}</p>
+            <p>{{infoAccount.CUSTOMERID}}</p>
+            <p>{{infoAccount.STARTDATE | date:'dd-MM-yyyy'}} {{infoAccount.ENDDATE | date:'dd-MM-yyyy'}}</p>
+        </div>
+        <p><button type="button" class=" btn btn-primary " href="" (click)="actualizarDatos() ">Guardar</button></p>
+        <p><button type="button" class=" btn btn-primary " href="" (click)="borrarRegistro() ">Borrar</button></p>
+
+  </div>
+</div>

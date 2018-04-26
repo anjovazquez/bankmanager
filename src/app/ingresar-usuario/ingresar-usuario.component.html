@@ -1,0 +1,23 @@
+<div>
+    <div class="list-item">
+        <div class="customer-info">
+            <p><b>Nombre: </b><input type="text" [(ngModel)]="dato.SURNAME"/></p>
+            <p><b>Apellidos: </b><input type="text" [(ngModel)]="dato.NAME"/></p>
+            <p><b>E-mail: </b><input type="text" [(ngModel)]="dato.EMAIL"/></p>
+            <p><b>Dirección: </b><input type="text" [(ngModel)]="dato.ADDRESS"/></p>
+            <p><b>DNI: </b><input type="text" [(ngModel)]="dato.ID"/></p>
+            <p><b>Fecha de salida: </b><input type="text" [(ngModel)]="dato.STARTDATE"/></p>
+            <p><b>Tipo de cliente: </b>
+                <select class="form-control" id="power"  [(ngModel)]="dato.CUSTOMERTYPEID" required>
+                        <option *ngFor="let customerType of customerTypes" [value]="customerType.CUSTOMERTYPEID">
+                                {{customerType.DESCRIPTION}}
+                        </option>
+                </select>
+            </p>
+            <p><b>Info: </b><input type="text" [(ngModel)]="dato.ID_DMS_DOC"/></p>
+            <p><b>Comentarios: </b><input type="text" [(ngModel)]="dato.COMMENTS"/></p>
+            <input type="file" id="filePicker" (change)="handleFileSelect($event)">
+            <p><button type="button" class=" btn btn-primary " href="" (click)="IngresarRegistro() ">Guardar</button></p>
+        </div>
+    </div>
+  </div>
