@@ -72,7 +72,7 @@ export class BankServiceService {
     return this.http.post<CustomerResponseBuscarCustomerTypeId>(customertypeidUrl, body, {headers: headers});
   }
 
-  /*
+  
   BorrarDatos(id:number) {
     var authorization = 'Bearer ' + claveActual;
 
@@ -80,12 +80,12 @@ export class BankServiceService {
     headers = headers.append("Authorization", authorization);
     headers = headers.append("Content-Type", "application/json");
     var body = `{"filter":{"CUSTOMERID":`+id+`}}`;
-    return this.http.delete(guardarUrl, new RequestOptions({
-      headers: headers,
-      body: body,
-   }));
+    return this.http.request('delete', guardarUrl, {
+      body: body, 
+      headers: headers
+   });
   }
-  */
+  
 
   getInfoAccounts(id:number):Observable<CustomerResponseInfoAccounts> {
     var authorization = 'Bearer ' + claveActual;

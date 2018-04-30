@@ -17,12 +17,15 @@
             <p><b>Comentarios: </b><input type="text" [(ngModel)]="info.COMMENTS"/></p>
         </div>
 
-        <div class="list-accounts" *ngFor="let infoAccount of infoAccounts">
-            <p>{{infoAccount.ACCOUNTID}}, {{infoAccount.ENTITYID}}, {{infoAccount.OFFICEID}}, {{infoAccount.CDID}}, {{infoAccount.ANID}}, {{infoAccount.ACCOUNT}}</p>
-            <p>{{infoAccount.BALANCE}}</p>
-            <p>{{infoAccount.CUSTOMERID}}</p>
-            <p>{{infoAccount.STARTDATE | date:'dd-MM-yyyy'}} {{infoAccount.ENDDATE | date:'dd-MM-yyyy'}}</p>
+        <div class="list-accounts" *ngIf="infoAccounts?.length > 0">
+            <div *ngFor="let infoAccount of infoAccounts">
+                <p>{{infoAccount.ACCOUNTID}}, {{infoAccount.ENTITYID}}, {{infoAccount.OFFICEID}}, {{infoAccount.CDID}}, {{infoAccount.ANID}}, {{infoAccount.ACCOUNT}}</p>
+                <p>{{infoAccount.BALANCE}}</p>
+                <p>{{infoAccount.CUSTOMERID}}</p>
+                <p>{{infoAccount.STARTDATE | date:'dd-MM-yyyy'}} {{infoAccount.ENDDATE | date:'dd-MM-yyyy'}}</p>
+            </div>
         </div>
+
         <p><button type="button" class=" btn btn-primary " href="" (click)="actualizarDatos() ">Guardar</button></p>
         <p><button type="button" class=" btn btn-primary " href="" (click)="borrarRegistro() ">Borrar</button></p>
 

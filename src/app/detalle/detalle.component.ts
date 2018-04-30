@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BankServiceService } from '../bank-service.service';
 
 import { Location } from '@angular/common';
@@ -21,7 +21,8 @@ export class DetalleComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private bankService: BankServiceService,
-    private location: Location
+    private location: Location,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -33,6 +34,7 @@ export class DetalleComponent implements OnInit {
         }
       });
       this.onLoadInfo = Object.assign({}, res.data[0]);
+      //console.log(res.data[0]);
     });
     
     this.bankService.getInfoAccounts(id).subscribe(res => this.infoAccounts = res.data);
@@ -99,7 +101,8 @@ export class DetalleComponent implements OnInit {
 
   borrarRegistro() {
     const id = +this.route.snapshot.paramMap.get('id');
-    //this.bankService.BorrarDatos(id).subscribe();
+    this.bankService.BorrarDatos(id).subscribe();
+    this.router.navigateByUrl('/inicio');
 
   }
 }
