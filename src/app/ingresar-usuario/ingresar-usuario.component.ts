@@ -32,6 +32,9 @@ export class IngresarUsuarioComponent implements OnInit {
   }
 
   IngresarRegistro() {
+    if (this.insertPhoto == null) {
+      this.insertPhoto = "";
+    }
     var insertInfoList = {surname: this.dato.SURNAME, email: this.dato.EMAIL, customertypeid: this.dato.CUSTOMERTYPEID, address: this.dato.ADDRESS, name: this.dato.NAME, id:this.dato.ID, startdate:this.dato.STARTDATE.toISOString(), ID_DMS_DOC:this.dato.ID_DMS_DOC, comments:this.dato.COMMENTS, photo:this.insertPhoto};
     this.bankService.InsertarDatos(insertInfoList).subscribe(res => { this.id = res.data   
       this.router.navigateByUrl('/detalle/'+this.id.CUSTOMERID);

@@ -103,7 +103,11 @@ export class DetalleComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.bankService.BorrarDatos(id).subscribe();
     this.router.navigateByUrl('/inicio');
+    window.location.reload();
+  }
 
+  irAInicio() {
+    this.router.navigateByUrl('/inicio');
   }
 }
 
