@@ -1,116 +1,133 @@
 .list-item {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 2% 2%;
-    box-shadow: 0 4px 8px 0 #e4333c, 0 4px 12px 0 #e4333c;
-    align-items: center;
-  }
-  
-  .customer-pic {
-    width:40%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align:center;
-  }
-  
-  .customer-info {
-    display: flex;
-    flex-direction: column;
-    width:50%;
-    font-size:2.2vw;
-    font-family: 'Gilda Display', serif;
-    line-height: 2.8em;
-    padding: 10px;
-  }
-
-  .comments {
-    display:flex;
-    width:100%;
-    font-size:2.2vw;
-    font-family: 'Gilda Display', serif;
-    padding: 10px;
- 
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2% 2%;
+  box-shadow: 0 4px 8px 0 #e4333c, 0 4px 12px 0 #e4333c;
+  align-items: center;
 }
-  
-  .list-item p {
-    margin: 0px 0px;
-  }
-  
-  .avatar {
-    border-radius: 50%;
-    max-width: 100%;
-    padding: 5px;
-  }
 
-  input {
-    float: right;
-    width:50%;
-    font-size:2.2vw;
-    font-family: 'Gilda Display', serif;
-    line-height: 1.6em;
-    padding: 10px; 
-    margin: 2px 2px; 
-  }
+.customer-pic {
+  width:40%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+}
 
-  input {
-    width:50%;
-    font-size:2.2vw;
-    font-family: 'Gilda Display', serif;
-    line-height: 1.6em;
-    padding: 10px;  
-  }
+.customer-info {
+  display: flex;
+  flex-direction: column;
+  width:50%;
+  font-size:2.2vw;
+  font-family: 'Gilda Display', serif;
+  line-height: 2.8em;
+  padding: 10px;
+}
 
-  .btn {
-    margin: 5px 5px 5px 5px;
-    color: #494949 !important;
-    text-transform: uppercase;
-    background: #ffffff;
-    padding: 20px;
-    border: 4px solid #494949 !important;
-    border-radius: 6px;
-    }
+.comments {
+  display:flex;
+  width:100%;
+  font-size:2.2vw;
+  font-family: 'Gilda Display', serif;
+  padding: 10px;
+
+}
+
+.list-item p {
+  margin: 0px 0px;
+}
+
+.avatar {
+  border-radius: 50%;
+  max-width: 100%;
+  padding: 5px;
+}
+
+input {
+  float: right;
+  width:50%;
+  font-size:2.2vw;
+  font-family: 'Gilda Display', serif;
+  line-height: 1.6em;
+  padding: 10px; 
+  margin: 2px 2px; 
+}
+
+input {
+  width:50%;
+  font-size:2.2vw;
+  font-family: 'Gilda Display', serif;
+  line-height: 1.6em;
+  padding: 10px;  
+}
+
+.btn {
+  margin: 5px 5px 5px 5px;
+  color: #494949 !important;
+  text-transform: uppercase;
+  background: #ffffff;
+  padding: 20px;
+  border: 4px solid #494949 !important;
+  border-radius: 6px;
+  }
 .btn:hover {
-    color: #ffffff !important;
-    background: #494949;
-    border-color: #494949 !important;
-    transition: all 0.4s ease 0s;
-    }
+  color: #ffffff !important;
+  background: #494949;
+  border-color: #494949 !important;
+  transition: all 0.4s ease 0s;
+  }
 
-    .list-accounts div{
-      width: 95%;
-      margin: 5px 10px;
-      line-height: 1.6em;
-      font-size:2.2vw;
-      font-family: 'Gilda Display', serif;
-      -moz-box-shadow:    inset 0 0 10px #000000;
-      -webkit-box-shadow: inset 0 0 10px #000000;
-      box-shadow:         inset 0 0 10px #000000;
-      display:inline-block;
-    }
+  .list-accounts div{
+    width: 95%;
+    margin: 5px 10px;
+    line-height: 1.6em;
+    font-size:2.2vw;
+    font-family: 'Gilda Display', serif;
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+    display:inline-block;
+  }
 
 .main-toolbar {
-  display: flex;
-  background: #e4333c;
+display: flex;
+background: #e4333c;
+padding: 3%;
 }
 
 .account-toolbar {
-  display:flex;
-  width: 100%;
-  background: #e4333c; 
+display:flex;
+width: 100%;
+background: #e4333c; 
 }
 
 .inicio {
-  margin: 15px 5px 0px 15px;
-  float: left;
-  font-size:5.0vw;
+margin: 15px 5px 0px 15px;
+float: left;
+font-size:5.0vw;
 }
 
-.guardar {
-  margin: 15px 5px 0px 15px;
-  float: right;  
-  width:20%;
-  display:block;
-  text-indent:-9999px;
-  background-image:url(assets/img/save-icon-24.jpg);
-  background-repeat:no-repeat;
+.main-toolbar .toolbar-item-left {
+display: flex;
+justify-content: left;
+flex-grow: 6;
+text-align: center;
+color:white;
 }
+
+.main-toolbar .toolbar-item-right {
+display: flex;
+justify-content: right;
+flex-grow: 1;
+text-align: right;
+color:white;
+}
+
+/*.guardar {
+margin: 15px 5px 0px 15px;
+float: right;  
+width:20%;
+display:block;
+text-indent:-9999px;
+background-repeat:no-repeat;
+}*/
+
