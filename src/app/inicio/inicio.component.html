@@ -1,5 +1,7 @@
+<div class="main-toolbar">
+    <button type="button" class=" btn btn-primary " href="" (click)="insertarUsuario() ">Insertar usuario</button>
+</div>
 <div *ngIf="infolists">
-    <p><button type="button" class=" btn btn-primary " href="" (click)="insertarUsuario() ">Insertar usuario</button></p>
     <div class="list-item" *ngFor="let infolist of infolists;" routerLink="/detalle/{{infolist.CUSTOMERID}}">
         <div class="customer-pic">
             <img src="data:image/png;base64,{{infolist.PHOTO}}" alt="Avatar" class="avatar" >

@@ -62,11 +62,11 @@
 
   .btn {
     margin: 5px 5px 5px 5px;
-    color: #e4333c !important;
+    color: #494949 !important;
     text-transform: uppercase;
     background: #ffffff;
     padding: 20px;
-    border: 4px solid #e4333c !important;
+    border: 4px solid #494949 !important;
     border-radius: 6px;
     }
 .btn:hover {
@@ -87,3 +87,30 @@
       box-shadow:         inset 0 0 10px #000000;
       display:inline-block;
     }
+
+.main-toolbar {
+  display: flex;
+  background: #e4333c;
+}
+
+.account-toolbar {
+  display:flex;
+  width: 100%;
+  background: #e4333c; 
+}
+
+.inicio {
+  margin: 15px 5px 0px 15px;
+  float: left;
+  font-size:5.0vw;
+}
+
+.guardar {
+  margin: 15px 5px 0px 15px;
+  float: right;  
+  width:20%;
+  display:block;
+  text-indent:-9999px;
+  background-image:url(assets/img/save-icon-24.jpg);
+  background-repeat:no-repeat;
+}

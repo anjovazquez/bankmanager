@@ -1,3 +1,7 @@
+<div class="main-toolbar">
+        <button type="button" class=" btn btn-primary " href="" (click)="irAInicio() ">Inicio</button>
+        <button type="button" class=" btn btn-primary " href="" (click)="IngresarRegistro() ">Guardar</button>
+    </div>
 <div>
     <div class="list-item">
         <div class="customer-info">
@@ -17,7 +21,6 @@
             <p><b>Info: </b><input type="text" [(ngModel)]="dato.ID_DMS_DOC"/></p>
             <p><b>Comentarios: </b><input type="text" [(ngModel)]="dato.COMMENTS"/></p>
             <input type="file" id="filePicker" (change)="handleFileSelect($event)">
-            <p><button type="button" class=" btn btn-primary " href="" (click)="IngresarRegistro() ">Guardar</button></p>
         </div>
     </div>
   </div>
