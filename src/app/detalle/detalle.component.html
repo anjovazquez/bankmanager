@@ -1,7 +1,11 @@
 <div class="main-toolbar">
-    <span class="icon inicio" (click)="irAInicio() ">&larr;</span>
-    <span class="icon guardar" (click)="actualizarDatos() ">guardar</span>
-    <button type="button" class=" btn btn-primary " href="" (click)="borrarRegistro() ">Borrar</button>
+    <div class="toolbar-item-left"><i class="fa fa-long-arrow-left fa-2x"></i></div>
+    <div class="toolbar-item-right">
+        <div (click)="actualizarDatos()"><i class="fa fa-save fa-2x"></i></div>
+    </div>
+    <div class="toolbar-item-right">
+        <div (click)="borrarRegistro()"><i class="fa fa-trash fa-2x"></i></div>
+    </div>
 </div>
 <div *ngIf="infos">
     <div class="list-item" *ngFor="let info of infos">
@@ -22,9 +26,9 @@
             <p><b>Comentarios: </b><input type="text" [(ngModel)]="info.COMMENTS"/></p>
         </div>
 
-        <div class="account-toolbar">
+        <!--<div class="account-toolbar">
             <button type="button" class=" btn btn-primary " href="" (click)="irAInicio() ">Inicio</button>
-        </div>
+        </div>-->
 
         <div class="list-accounts" *ngIf="infoAccounts?.length > 0">
             <div *ngFor="let infoAccount of infoAccounts">
