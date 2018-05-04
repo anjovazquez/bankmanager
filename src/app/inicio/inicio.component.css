@@ -40,15 +40,32 @@
     padding: 20px;
     border: 4px solid #494949 !important;
     border-radius: 6px;
-    }
+}
 .btn:hover {
     color: #ffffff !important;
     background: #494949;
     border-color: #494949 !important;
     transition: all 0.4s ease 0s;
-    }
+}
 
-    .main-toolbar {
-        display: flex;
-        background: #e4333c;
-      }
+.main-toolbar {
+    display: flex;
+    background: #e4333c;
+    padding: 2%;
+}
+
+.main-toolbar .toolbar-item-left {
+    display: flex;
+    justify-content: left;
+    flex-grow: 6;
+    text-align: center;
+    color:white;
+}
+    
+.fa-user-plus {
+    cursor:pointer;
+  }
+  
+.fa-user-plus:hover {
+    color: black;
+}

@@ -1,5 +1,7 @@
 <div class="main-toolbar">
-    <button type="button" class=" btn btn-primary " href="" (click)="insertarUsuario() ">Insertar usuario</button>
+    <div class="main-toolbar">
+        <div class="toolbar-item-left"><i class="fa fa-user-plus fa-2x" (click)="insertarUsuario()"></i></div>
+    </div>
 </div>
 <div *ngIf="infolists">
     <div class="list-item" *ngFor="let infolist of infolists;" routerLink="/detalle/{{infolist.CUSTOMERID}}">

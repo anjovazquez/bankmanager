@@ -17,6 +17,7 @@ export class DetalleComponent implements OnInit {
   public infos: Info[];
   public infoAccounts: CustomerDataInfoAccount;
   onLoadInfo:Info;
+  public tab: number = 2;
 
   constructor(
     private route: ActivatedRoute,
@@ -38,6 +39,8 @@ export class DetalleComponent implements OnInit {
     });
     
     this.bankService.getInfoAccounts(id).subscribe(res => this.infoAccounts = res.data);
+
+    this.tab = 1;
   }
 
   actualizarDatos(){
@@ -108,6 +111,15 @@ export class DetalleComponent implements OnInit {
 
   irAInicio() {
     this.router.navigateByUrl('/inicio');
+  }
+
+   openTab(evt, informacion, cuentas) {
+    informacion.style.display = "none";
+    cuentas.style.display = "none";
+
+    informacion.className = informacion.style.backcolor.replace("red", "#e4333c");
+    cuentas.className = cuentas.style.backcolor.replace("red", "#e4333c");
+    evt.currentTarget.style.backcolor = "red";
   }
 }
 
