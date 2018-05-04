@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs-compat/Observable';
 import { of } from 'rxjs/observable/of';
-import 'rxjs/add/operator/map';
-import { map, filter, scan } from 'rxjs/operators';
-
+import 'rxjs-compat/add/operator/map';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
