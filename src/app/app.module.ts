@@ -42,7 +42,7 @@ import {MatCardModule} from '@angular/material/card';
     MatInputModule,
     MatCardModule,
     MatSelectModule
-  ],
+    ],
   providers: [
     LoginService,
     BankServiceService

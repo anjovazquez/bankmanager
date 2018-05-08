@@ -7,15 +7,23 @@
 }
 
 .customer-pic {
-    width:20%;
+    width: 20%;
     text-align:center;
-    background:red;
+    margin: 0 0;
+}
+
+.mat-card-image{
+    margin:0 0;
+}
+
+.mat-card-image:first-child {
+    margin: 0 0;
 }
 
 .customer-info {
+    width:80%;
     display: flex;
     flex-direction: column;
-    width:80%;
     font-size:1.9vw;
     font-family: 'Gilda Display', serif;
     line-height: 1.9em;
