@@ -9,44 +9,64 @@
         <div (click)="borrarRegistro()"><i class="fa fa-trash fa-2x"></i></div>
     </div>
 </div>
-<div class="sub-toolbar">
-    <div class="tabs">
-        <a class="informacion" [ngClass]=" {'active-tab': tab==1 }" (click)=" tab = 1 " (click)="openTab(event,'informacion', 'cuentas')">Información</a>
-        <a class="cuentas" [ngClass]=" {'active-tab': tab==2 }" (click)=" tab = 2 " (click)="openTab(event,'informacion', 'cuentas')">Cuentas</a>
-    </div>
-</div>
-<div *ngIf="infos">
-    <div class="list-item" *ngFor="let info of infos">
-        <div class="tab-panel" id="tabPanel1" *ngIf="tab==1">
-            <div class="customer-info">
-                <p><b>Nombre: </b><input type="text" [(ngModel)]="info.SURNAME"/></p>
-                <p><b>Apellidos: </b><input type="text" [(ngModel)]="info.NAME"/></p>
-                <p><b>E-mail: </b><input type="text" [(ngModel)]="info.EMAIL"/></p>
-                <p><b>Dirección: </b><input type="text" [(ngModel)]="info.ADDRESS"/></p>
-                <p><b>DNI: </b><input type="text" [(ngModel)]="info.ID"/></p>
-                <p><b>Fecha de salida: </b><input type="text" [(ngModel)]="info.STARTDATE"/></p>
-                <p><b>Tipo de cliente: </b><input type="text" [(ngModel)]="info.CUSTOMERTYPEID" /></p>
-                <p><b>Info: </b><input type="text" [(ngModel)]="info.ID_DMS_DOC"/></p>
-            </div>
-            <div class="customer-pic">
-                <img src="data:image/png;base64,{{info.PHOTO}}" alt="Avatar" class="avatar" >
-            </div>
-            <div class="comments">
-                <p><b>Comentarios: </b><input type="text" [(ngModel)]="info.COMMENTS"/></p>
-            </div>
-        </div>
-        <div class="tab-panel" id="tabPanel2" *ngIf="tab==2">
-            <div class="list-accounts" *ngIf="infoAccounts?.length > 0">
-                 <div *ngFor="let infoAccount of infoAccounts">
-                    <p>{{infoAccount.ACCOUNTID}}, {{infoAccount.ENTITYID}}, {{infoAccount.OFFICEID}}, {{infoAccount.CDID}}, {{infoAccount.ANID}}, {{infoAccount.ACCOUNT}}</p>
-                    <p>{{infoAccount.BALANCE}}</p>
-                    <p>{{infoAccount.CUSTOMERID}}</p>
-                    <p>{{infoAccount.STARTDATE | date:'dd-MM-yyyy'}} {{infoAccount.ENDDATE | date:'dd-MM-yyyy'}}</p>
+
+<mat-tab-group class="sub-toolbar">
+    <div *ngIf="infos">
+        <div class="list-item" *ngFor="let info of infos">
+            <mat-tab label="Información">
+                <div class="tab-panel" id="tabPanel1">
+                    <div class="customer-info">
+                        <mat-form-field>
+                            <input matInput placeholder="Nombre" [(ngModel)]="info.SURNAME">
+                        </mat-form-field>
+                        <mat-form-field>
+                                <input matInput placeholder="Apellidos" [(ngModel)]="info.NAME">
+                        </mat-form-field>
+                        <mat-form-field>
+                                <input matInput placeholder="E-mail" [(ngModel)]="info.EMAIL">
+                        </mat-form-field>
+                        <mat-form-field>
+                                <input matInput placeholder="Dirección" [(ngModel)]="info.ADDRESS">
+                        </mat-form-field>
+                        <mat-form-field>
+                                <input matInput placeholder="DNI" [(ngModel)]="info.ID">
+                        </mat-form-field>
+                        <mat-form-field>
+                                <input matInput placeholder="Fecha de salida" [(ngModel)]="info.STARTDATE">
+                        </mat-form-field>
+                        <mat-form-field>
+                                <input matInput placeholder="Tipo de cliente" [(ngModel)]="info.CUSTOMERTYPEID">
+                        </mat-form-field>
+                        <mat-form-field>
+                                <input matInput placeholder="Información" [(ngModel)]="info.ID_DMS_DOC">
+                        </mat-form-field>
+                    </div>
+                    <div class="customer-pic">
+                        <img src="data:image/png;base64,{{info.PHOTO}}" alt="Avatar" class="avatar" >
+                    </div>
+                    <div class="comments">
+                        <mat-form-field>
+                                    <textarea matInput placeholder="Comentarios" [(ngModel)]="info.COMMENTS"></textarea>
+                        </mat-form-field>
+                    </div>
                 </div>
-            </div>
+            </mat-tab>
+                <mat-tab label="Cuentas">
+                <div class="tab-panel" id="tabPanel2">
+                    <div class="list-accounts" *ngIf="infoAccounts?.length > 0">
+                        <div *ngFor="let infoAccount of infoAccounts">
+                            <mat-card class="account-card">
+                                <mat-card-content>
+                                        <p>Cuenta: {{infoAccount.ACCOUNTID}}, {{infoAccount.ENTITYID}}, {{infoAccount.OFFICEID}}, {{infoAccount.CDID}}, {{infoAccount.ANID}}, {{infoAccount.ACCOUNT}}</p>
+                                        <p>Balance: {{infoAccount.BALANCE}}</p>
+                                        <p>Id Cliente: {{infoAccount.CUSTOMERID}}</p>
+                                        <p>Período: {{infoAccount.STARTDATE | date:'dd-MM-yyyy'}} {{infoAccount.ENDDATE | date:'dd-MM-yyyy'}}</p> 
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </mat-tab>
         </div>
-
-
-
     </div>
-</div>
+</mat-tab-group>

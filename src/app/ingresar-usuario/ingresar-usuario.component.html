@@ -7,21 +7,33 @@
 <div>
     <div class="list-item">
         <div class="customer-info">
-            <p><b>Nombre: </b><input type="text" [(ngModel)]="dato.SURNAME"/></p>
-            <p><b>Apellidos: </b><input type="text" [(ngModel)]="dato.NAME"/></p>
-            <p><b>E-mail: </b><input type="text" [(ngModel)]="dato.EMAIL"/></p>
-            <p><b>Dirección: </b><input type="text" [(ngModel)]="dato.ADDRESS"/></p>
-            <p><b>DNI: </b><input type="text" [(ngModel)]="dato.ID"/></p>
-            <p><b>Fecha de salida: </b><input type="text" [(ngModel)]="dato.STARTDATE"/></p>
-            <p><b>Tipo de cliente: </b>
-                <select class="form-control" id="power"  [(ngModel)]="dato.CUSTOMERTYPEID" required>
-                        <option *ngFor="let customerType of customerTypes" [value]="customerType.CUSTOMERTYPEID">
-                                {{customerType.DESCRIPTION}}
-                        </option>
-                </select>
-            </p>
-            <p><b>Info: </b><input type="text" [(ngModel)]="dato.ID_DMS_DOC"/></p>
-            <p><b>Comentarios: </b><input type="text" [(ngModel)]="dato.COMMENTS"/></p>
+            <mat-form-field>
+                <input matInput placeholder="Nombre" [(ngModel)]="dato.SURNAME">
+            </mat-form-field>
+            <mat-form-field>
+                    <input matInput placeholder="Apellidos" [(ngModel)]="dato.NAME">
+            </mat-form-field>
+            <mat-form-field>
+                    <input matInput placeholder="E-mail" [(ngModel)]="dato.EMAIL">
+            </mat-form-field>
+            <mat-form-field>
+                    <input matInput placeholder="Dirección" [(ngModel)]="dato.ADDRESS">
+            </mat-form-field>
+            <mat-form-field>
+                    <input matInput placeholder="DNI" [(ngModel)]="dato.ID">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Fecha de salida" [(ngModel)]="dato.STARTDATE">
+            </mat-form-field>
+            <mat-select placeholder="Tipo de cliente" [(ngModel)]="dato.CUSTOMERTYPEID">
+                <mat-option *ngFor="let customerType of customerTypes" [value]="customerType.CUSTOMERTYPEID">{{customerType.DESCRIPTION}}</mat-option>
+            </mat-select>
+            <mat-form-field>
+                    <input matInput placeholder="Info" [(ngModel)]="dato.ID_DMS_DOC">
+            </mat-form-field>
+            <mat-form-field>
+                    <input matInput placeholder="Comentarios" [(ngModel)]="dato.COMMENTS">
+            </mat-form-field>
             <input type="file" id="filePicker" (change)="handleFileSelect($event)">
         </div>
     </div>

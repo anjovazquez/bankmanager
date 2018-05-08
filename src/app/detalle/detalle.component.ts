@@ -114,8 +114,6 @@ export class DetalleComponent implements OnInit {
   }
 
    openTab(evt, informacion, cuentas) {
-    var x;
-    x = document.getElementsByClassName("city");
     informacion.style.display = "none";
     cuentas.style.display = "none";
 

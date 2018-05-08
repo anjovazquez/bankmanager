@@ -5,13 +5,18 @@
 </div>
 <div *ngIf="infolists">
     <div class="list-item" *ngFor="let infolist of infolists;" routerLink="/detalle/{{infolist.CUSTOMERID}}">
-        <div class="customer-pic">
-            <img src="data:image/png;base64,{{infolist.PHOTO}}" alt="Avatar" class="avatar" >
-        </div>
-        <div class="customer-info">
-          <p>{{infolist.SURNAME}}, {{infolist.NAME}}</p>
-          <p>{{infolist.EMAIL}}</p>
-          <p>{{infolist.ADDRESS}}</p>
-        </div>
+        
+        <mat-card class="customer-card">
+                <div class="customer-pic">
+                    <img mat-card-image src="data:image/png;base64,{{infolist.PHOTO}}" alt="Avatar" class="avatar" >
+                </div>
+                <mat-card-content>
+                    <div class="customer-info">
+                        <p>{{infolist.SURNAME}}, {{infolist.NAME}}</p>
+                        <p>{{infolist.EMAIL}}</p>
+                        <p>{{infolist.ADDRESS}}</p>
+                    </div>
+                </mat-card-content>
+            </mat-card>
     </div>
 </div>

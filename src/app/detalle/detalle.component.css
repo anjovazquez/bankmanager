@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   margin: 2% 2%;
-  box-shadow: 0 4px 8px 0 #e4333c, 0 4px 12px 0 #e4333c;
   align-items: center;
 }
 
@@ -43,49 +42,17 @@
 }
 
 input {
-  float: right;
   width:50%;
   font-size:2.2vw;
   font-family: 'Gilda Display', serif;
   line-height: 1.6em;
-  padding: 10px; 
   margin: 2px 2px; 
 }
 
-input {
-  width:50%;
-  font-size:2.2vw;
-  font-family: 'Gilda Display', serif;
-  line-height: 1.6em;
-  padding: 10px;  
-}
-
-.btn {
-  margin: 5px 5px 5px 5px;
-  color: #494949 !important;
-  text-transform: uppercase;
-  background: #ffffff;
-  padding: 20px;
-  border: 4px solid #494949 !important;
-  border-radius: 6px;
-  }
-.btn:hover {
-  color: #ffffff !important;
-  background: #494949;
-  border-color: #494949 !important;
-  transition: all 0.4s ease 0s;
-  }
-
 .list-accounts div{
-  width: 95%;
-  margin: 5px 10px;
   line-height: 1.6em;
   font-size:2.2vw;
   font-family: 'Gilda Display', serif;
-  -moz-box-shadow:    inset 0 0 10px #000000;
-  -webkit-box-shadow: inset 0 0 10px #000000;
-  box-shadow:         inset 0 0 10px #000000;
-  display:inline-block;
 }
 
 .main-toolbar {
@@ -145,36 +112,18 @@ background-repeat:no-repeat;
 .sub-toolbar {
   display:inline-block;
   width: 100%;
-  background: #e4333c; 
-  border-top: 1px solid #4f5565;
-  padding: 3%;
-  width:94%;
-  color:white;
 }
 
-.informacion:hover {
-  color:black;
-  cursor:pointer;
+.mat-tab-label {
+  background-color: blue;
 }
 
-.cuentas:hover {
-  color:black;
-  cursor:pointer;
+::ng-deep .mat-tab-label {
+  background: #e4333c;
+  width:200%; 
 }
 
-.informacion {
-  float: left;
-  width:50%;
-  text-align:center
-}
-
-.cuentas {
-  float: left;
-  width:50%;
-  text-align:center;
-}
-
-.clicked{
-  background-color: white;
-  color: #7A232E;
-}
+.mat-card {
+  width:100%;
+  margin: 10px 10px;
+} 
