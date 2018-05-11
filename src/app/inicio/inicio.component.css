@@ -19,7 +19,7 @@
     width:80%;
     display: flex;
     flex-direction: column;
-    font-size:1.9vw;
+    font-size:1.9;
     font-family: 'Gilda Display', serif;
     line-height: 1.9em;
 }
@@ -53,4 +53,33 @@
   
 .fa-user-plus:hover {
     color: black;
+}
+
+@media screen and (max-width: 540px) {
+    .avatar {
+        max-width: 60%;
+
+    }
+}
+
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+    .avatar {
+        max-width: 50%;
+
+    }
+}
+
+@media screen and (min-width: 780px) and (max-width: 1200px) {
+    .avatar {
+        max-width: 40%;
+
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .avatar {
+        max-width: 30%;
+
+    }
 }
