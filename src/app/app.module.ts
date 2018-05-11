@@ -15,6 +15,13 @@ import { InicioComponent } from './inicio/inicio.component';
 import { BankServiceService } from './bank-service.service';
 import { DetalleComponent } from './detalle/detalle.component';
 import { IngresarUsuarioComponent } from './ingresar-usuario/ingresar-usuario.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTabsModule} from '@angular/material/tabs';
+import { MatFormFieldModule, MatInputModule, MatSelectModule } from '@angular/material';
+import {MatCardModule} from '@angular/material/card';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material';
+
 
 
 
@@ -30,8 +37,16 @@ import { IngresarUsuarioComponent } from './ingresar-usuario/ingresar-usuario.co
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCardModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+      ],
   providers: [
     LoginService,
     BankServiceService
