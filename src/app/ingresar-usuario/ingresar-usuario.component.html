@@ -23,7 +23,9 @@
                     <input matInput placeholder="DNI" [(ngModel)]="dato.ID">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Fecha de salida" [(ngModel)]="dato.STARTDATE">
+                <input matInput [matDatepicker]="picker" placeholder="Fecha de salida" [(ngModel)]="dato.STARTDATE">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
             <mat-select placeholder="Tipo de cliente" [(ngModel)]="dato.CUSTOMERTYPEID">
                 <mat-option *ngFor="let customerType of customerTypes" [value]="customerType.CUSTOMERTYPEID">{{customerType.DESCRIPTION}}</mat-option>

@@ -49,55 +49,47 @@ input {
   margin: 2px 2px; 
 }
 
-.list-accounts div{
-  line-height: 1.6em;
+textarea {
+  width:50%;
   font-size:2.2vw;
   font-family: 'Gilda Display', serif;
+  line-height: 1.6em;
+  margin: 2px 2px; 
 }
 
 .main-toolbar {
-display: flex;
-background: #e4333c;
-padding: 3%;
+  display: flex;
+  background: #e4333c;
+  padding: 3%;
 }
 
 .account-toolbar {
-display:flex;
-width: 100%;
-background: #e4333c; 
+  display:flex;
+  width: 100%;
+  background: #e4333c; 
 }
 
 .inicio {
-margin: 15px 5px 0px 15px;
-float: left;
-font-size:5.0vw;
+  margin: 15px 5px 0px 15px;
+  float: left;
+  font-size:5.0vw;
 }
 
 .main-toolbar .toolbar-item-left {
-display: flex;
-justify-content: left;
-flex-grow: 6;
-text-align: center;
-color:white;
+  display: flex;
+  justify-content: left;
+  flex-grow: 6;
+  text-align: center;
+  color:white;
 }
 
 .main-toolbar .toolbar-item-right {
-display: flex;
-justify-content: right;
-flex-grow: 1;
-text-align: right;
-color:white;
+  display: flex;
+  justify-content: right;
+  flex-grow: 1;
+  text-align: right;
+  color:white;
 }
-
-/*.guardar {
-margin: 15px 5px 0px 15px;
-float: right;  
-width:20%;
-display:block;
-text-indent:-9999px;
-background-repeat:no-repeat;
-}*/
-
 
 .fa:hover {
   color: black;

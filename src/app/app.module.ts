@@ -19,6 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTabsModule} from '@angular/material/tabs';
 import { MatFormFieldModule, MatInputModule, MatSelectModule } from '@angular/material';
 import {MatCardModule} from '@angular/material/card';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material';
 
 
 
@@ -41,8 +43,10 @@ import {MatCardModule} from '@angular/material/card';
     MatFormFieldModule,
     MatInputModule,
     MatCardModule,
-    MatSelectModule
-    ],
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+      ],
   providers: [
     LoginService,
     BankServiceService

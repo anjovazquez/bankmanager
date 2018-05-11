@@ -9,11 +9,6 @@
 .customer-pic {
     width: 20%;
     text-align:center;
-    margin: 0 0;
-}
-
-.mat-card-image{
-    margin:0 0;
 }
 
 .mat-card-image:first-child {
