@@ -1,7 +1,5 @@
 <div class="main-toolbar">
-    <div class="main-toolbar">
-        <div class="toolbar-item-left"><i class="fa fa-user-plus fa-2x" (click)="insertarUsuario()"></i></div>
-    </div>
+    <div class="toolbar-item-left"><i class="fa fa-user-plus fa-2x" (click)="insertarUsuario()"></i></div>
 </div>
 <div class="list-item" *ngFor="let infolist of infolists;" routerLink="/detalle/{{infolist.CUSTOMERID}}">       
     <mat-card class="customer-card">

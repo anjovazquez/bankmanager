@@ -16,19 +16,17 @@
   display: flex;
   flex-direction: column;
   width:50%;
-  font-size:2.2vw;
+  font-size:1.6;
   font-family: 'Gilda Display', serif;
-  line-height: 2.8em;
-  padding: 10px;
+  line-height: 2.0em;
 }
 
 .comments {
   display:flex;
   width:100%;
-  font-size:2.2vw;
+  font-size:1.6;
   font-family: 'Gilda Display', serif;
   padding: 10px;
-
 }
 
 .list-item p {
@@ -43,7 +41,7 @@
 
 input {
   width:50%;
-  font-size:2.2vw;
+  font-size:2.2;
   font-family: 'Gilda Display', serif;
   line-height: 1.6em;
   margin: 2px 2px; 
@@ -51,7 +49,7 @@ input {
 
 textarea {
   width:100%;
-  font-size:2.2vw;
+  font-size:2.2;
   font-family: 'Gilda Display', serif;
   line-height: 1.6em;
   margin: 2px 2px;
@@ -106,10 +104,6 @@ textarea {
   width: 100%;
 }
 
-.mat-tab-label {
-  background-color: blue;
-}
-
 ::ng-deep .mat-tab-label {
   background: #e4333c;
   width:200%; 
@@ -119,3 +113,27 @@ textarea {
   width:100%;
   margin: 10px 10px;
 } 
+
+@media screen and (min-width: 1100px){
+  .customer-info {
+    font-size:0.9em;
+  }
+
+  .comments {
+    font-size:0.9em;
+  }
+
+  .main-toolbar {
+    height:25px;
+  }
+
+  .account-card {
+    padding:12px;
+  }
+
+  .account-info {
+    font-size:0.9em;
+    font-family: 'Gilda Display', serif;
+  }
+}
+

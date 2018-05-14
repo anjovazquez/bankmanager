@@ -55,31 +55,28 @@
     color: black;
 }
 
-@media screen and (max-width: 540px) {
-    .avatar {
-        max-width: 60%;
-
-    }
-}
-
 /* For Tablets */
-@media screen and (min-width: 540px) and (max-width: 780px) {
+@media screen and (max-width: 1100px) {
     .avatar {
-        max-width: 50%;
-
+        width: 60%;
     }
 }
 
-@media screen and (min-width: 780px) and (max-width: 1200px) {
+@media screen and (min-width: 1100px){
     .avatar {
-        max-width: 40%;
-
+        width: 30%;
     }
-}
 
-@media screen and (min-width: 1200px) {
-    .avatar {
-        max-width: 30%;
+    .customer-card {
+        padding:8px;
+    }
 
+    .customer-info {
+        font-size:1.5;
+        line-height: 1.5em;
+    }
+
+    .main-toolbar {
+        height:25px;
     }
 }

@@ -58,10 +58,12 @@
                     <div *ngFor="let infoAccount of infoAccounts">
                         <mat-card class="account-card">
                             <mat-card-content>
-                                <p>Cuenta: {{infoAccount.ACCOUNTID}}, {{infoAccount.ENTITYID}}, {{infoAccount.OFFICEID}}, {{infoAccount.CDID}}, {{infoAccount.ANID}}, {{infoAccount.ACCOUNT}}</p>
-                                <p>Balance: {{infoAccount.BALANCE}}</p>
-                                <p>Id Cliente: {{infoAccount.CUSTOMERID}}</p>
-                                <p>Período: {{infoAccount.STARTDATE | date:'dd-MM-yyyy'}} {{infoAccount.ENDDATE | date:'dd-MM-yyyy'}}</p> 
+                                <div class="account-info">
+                                    <p>Cuenta: {{infoAccount.ACCOUNTID}}, {{infoAccount.ENTITYID}}, {{infoAccount.OFFICEID}}, {{infoAccount.CDID}}, {{infoAccount.ANID}}, {{infoAccount.ACCOUNT}}</p>
+                                    <p>Balance: {{infoAccount.BALANCE}}</p>
+                                    <p>Id Cliente: {{infoAccount.CUSTOMERID}}</p>
+                                    <p>Período: {{infoAccount.STARTDATE | date:'dd-MM-yyyy'}} {{infoAccount.ENDDATE | date:'dd-MM-yyyy'}}</p> 
+                                </div>
                             </mat-card-content>
                         </mat-card>
                     </div>
