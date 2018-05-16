@@ -15,7 +15,7 @@
 .customer-info {
   display: flex;
   flex-direction: column;
-  width:50%;
+  width:40%;
   font-size:1.6;
   font-family: 'Gilda Display', serif;
   line-height: 2.0em;
@@ -61,12 +61,6 @@ textarea {
   padding: 3%;
 }
 
-.account-toolbar {
-  display:flex;
-  width: 100%;
-  background: #e4333c; 
-}
-
 .inicio {
   margin: 15px 5px 0px 15px;
   float: left;
@@ -110,9 +104,11 @@ textarea {
 }
 
 .mat-card {
-  width:100%;
   margin: 10px 10px;
 } 
+
+@media screen and (max-width:361px) {
+}
 
 @media screen and (min-width: 1100px){
   .customer-info {
@@ -127,8 +123,12 @@ textarea {
     height:25px;
   }
 
-  .account-card {
+  .mat-card {
     padding:12px;
+  }
+
+  .list-accounts {
+    width:200%;
   }
 
   .account-info {
