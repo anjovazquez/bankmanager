@@ -111,6 +111,10 @@ textarea {
   width:200%;
 }
 
+.accout-info {
+  font-family: 'Gilda Display', serif;
+}
+
 @media screen and (max-width:361px) {
 }
 
@@ -133,7 +137,6 @@ textarea {
 
   .account-info {
     font-size:0.9em;
-    font-family: 'Gilda Display', serif;
   }
 }
 

@@ -46,12 +46,28 @@
     text-align: center;
     color:white;
 }
+
+.main-toolbar .toolbar-item-right {
+    display: flex;
+    justify-content: right;
+    flex-grow: 1;
+    text-align: right;
+    color:white;
+    }
     
 .fa-user-plus {
     cursor:pointer;
   }
   
 .fa-user-plus:hover {
+    color: black;
+}
+
+.fa-sign-out {
+    cursor:pointer;
+}
+
+.fa-sign-out:hover {
     color: black;
 }
 
