@@ -28,7 +28,7 @@
   .main-toolbar {
     display: flex;
     background: #e4333c;
-    padding: 3%;
+    padding: 2%;
   }
 
   .main-toolbar .toolbar-item-left {

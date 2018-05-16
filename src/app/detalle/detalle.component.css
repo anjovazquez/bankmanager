@@ -58,7 +58,7 @@ textarea {
 .main-toolbar {
   display: flex;
   background: #e4333c;
-  padding: 3%;
+  padding: 2%;
 }
 
 .inicio {
@@ -107,6 +107,10 @@ textarea {
   margin: 10px 10px;
 } 
 
+.list-accounts {
+  width:200%;
+}
+
 @media screen and (max-width:361px) {
 }
 
@@ -125,10 +129,6 @@ textarea {
 
   .mat-card {
     padding:12px;
-  }
-
-  .list-accounts {
-    width:200%;
   }
 
   .account-info {
