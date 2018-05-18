@@ -48,7 +48,7 @@ import { environment } from '../environments/environment';
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('/bankmanager/ngsw-worker.js', { enabled: environment.production })
       ],
   providers: [
     LoginService,
