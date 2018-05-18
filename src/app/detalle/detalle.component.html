@@ -59,10 +59,15 @@
                         <mat-card class="account-card">
                             <mat-card-content>
                                 <div class="account-info">
-                                    <p>Cuenta: {{infoAccount.ACCOUNTID}}, {{infoAccount.ENTITYID}}, {{infoAccount.OFFICEID}}, {{infoAccount.CDID}}, {{infoAccount.ANID}}, {{infoAccount.ACCOUNT}}</p>
-                                    <p>Balance: {{infoAccount.BALANCE}}</p>
-                                    <p>Id Cliente: {{infoAccount.CUSTOMERID}}</p>
-                                    <p>Período: {{infoAccount.STARTDATE | date:'dd-MM-yyyy'}} {{infoAccount.ENDDATE | date:'dd-MM-yyyy'}}</p> 
+                                    <p>Cuenta: {{infoAccount.ACCOUNT}}</p>
+                                    <p>Balance: {{infoAccount.BALANCE}} &#8364;</p>
+                                    <p>Fecha apertura: {{infoAccount.STARTDATE | date:'dd-MM-yyyy'}}</p>
+                                    <div *ngIf="infoAccount.ENDDATE != NULL">
+                                        <p>Fecha finalización: {{infoAccount.ENDDATE | date:'dd-MM-yyyy'}}</p>
+                                    </div>
+                                    <div *ngIf="infoAccount.ENDDATE == NULL">
+                                        <p>Fecha finalización: En vigor</p>
+                                    </div>                                   
                                 </div>
                             </mat-card-content>
                         </mat-card>
