@@ -1,6 +1,7 @@
 <div class="main-toolbar">
-    <div class="main-toolbar">
-        <div class="toolbar-item-left"><i class="fa fa-user-plus fa-2x" (click)="insertarUsuario()"></i></div>
+    <div class="toolbar-item-left"><i class="fa fa-user-plus fa-2x" (click)="insertarUsuario()"></i></div>
+    <div class="toolbar-item-right">
+        <div (click)="logout()"><i class="fa fa-sign-out fa-2x"></i></div>
     </div>
 </div>
 <div class="list-item" *ngFor="let infolist of infolists;" routerLink="/detalle/{{infolist.CUSTOMERID}}">       

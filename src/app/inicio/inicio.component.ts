@@ -45,6 +45,11 @@ export class InicioComponent implements OnInit {
     this.router.navigateByUrl('/ingresar');
   }
 
+  logout():void {
+    this.router.navigateByUrl('/login');
+    localStorage.setItem('x-auth', '');
+  }
+
 }
 
 interface info {

@@ -21,6 +21,8 @@ import { MatFormFieldModule, MatInputModule, MatSelectModule } from '@angular/ma
 import {MatCardModule} from '@angular/material/card';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 
@@ -45,7 +47,8 @@ import {MatNativeDateModule} from '@angular/material';
     MatCardModule,
     MatSelectModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    ServiceWorkerModule.register('/bankmanager/ngsw-worker.js', { enabled: environment.production })
       ],
   providers: [
     LoginService,

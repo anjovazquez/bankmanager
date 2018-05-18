@@ -27,11 +27,10 @@
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
-            <mat-select placeholder="Tipo de cliente" [(ngModel)]="dato.CUSTOMERTYPEID">
-                <mat-option *ngFor="let customerType of customerTypes" [value]="customerType.CUSTOMERTYPEID">{{customerType.DESCRIPTION}}</mat-option>
-            </mat-select>
             <mat-form-field>
-                    <input matInput placeholder="Info" [(ngModel)]="dato.ID_DMS_DOC">
+                <mat-select placeholder="Tipo de cliente" [(ngModel)]="dato.CUSTOMERTYPEID">
+                    <mat-option *ngFor="let customerType of customerTypes" [value]="customerType.CUSTOMERTYPEID">{{customerType.DESCRIPTION}}</mat-option>
+                </mat-select>
             </mat-form-field>
             <mat-form-field>
                     <input matInput placeholder="Comentarios" [(ngModel)]="dato.COMMENTS">

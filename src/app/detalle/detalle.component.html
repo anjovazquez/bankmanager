@@ -34,13 +34,12 @@
                         <input matInput [matDatepicker]="picker" placeholder="Fecha de salida" [(ngModel)]="info.STARTDATE">
                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
-                    </mat-form-field>                    
-                    <mat-select placeholder="Tipo de cliente" [(ngModel)]="info.CUSTOMERTYPEID">
-                        <mat-option *ngFor="let customerType of customerTypes" [value]="customerType.CUSTOMERTYPEID">{{customerType.DESCRIPTION}}</mat-option>
-                    </mat-select>
+                    </mat-form-field>   
                     <mat-form-field>
-                        <input matInput placeholder="Información" [(ngModel)]="info.ID_DMS_DOC">
-                    </mat-form-field>
+                        <mat-select placeholder="Tipo de cliente" [(ngModel)]="info.CUSTOMERTYPEID">
+                            <mat-option *ngFor="let customerType of customerTypes" [value]="customerType.CUSTOMERTYPEID">{{customerType.DESCRIPTION}}</mat-option>
+                        </mat-select>
+                    </mat-form-field> 
                 </div>
                 <div class="customer-pic">
                     <img src="data:image/png;base64,{{info.PHOTO}}" alt="Avatar" class="avatar" >
@@ -58,10 +57,18 @@
                     <div *ngFor="let infoAccount of infoAccounts">
                         <mat-card class="account-card">
                             <mat-card-content>
-                                <p>Cuenta: {{infoAccount.ACCOUNTID}}, {{infoAccount.ENTITYID}}, {{infoAccount.OFFICEID}}, {{infoAccount.CDID}}, {{infoAccount.ANID}}, {{infoAccount.ACCOUNT}}</p>
-                                <p>Balance: {{infoAccount.BALANCE}}</p>
-                                <p>Id Cliente: {{infoAccount.CUSTOMERID}}</p>
-                                <p>Período: {{infoAccount.STARTDATE | date:'dd-MM-yyyy'}} {{infoAccount.ENDDATE | date:'dd-MM-yyyy'}}</p> 
+                                <div class="account-info">
+                                    <p>Cuenta: {{infoAccount.ACCOUNT}}</p>
+                                    <p>Balance: {{infoAccount.BALANCE}} &#8364;</p>
+                                    <p>Fecha apertura: {{infoAccount.STARTDATE | date:'dd-MM-yyyy'}}</p>
+                                    <div *ngIf="infoAccount.ENDDATE != NULL">
+                                        <p>Fecha finalización: {{infoAccount.ENDDATE | date:'dd-MM-yyyy'}}</p>
+                                    </div>
+                                    
+                                    <div *ngIf="infoAccount.ENDDATE == NULL">
+                                        <p>Fecha finalización: En vigor</p>
+                                    </div>                                   
+                                </div>
                             </mat-card-content>
                         </mat-card>
                     </div>

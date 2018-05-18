@@ -46,7 +46,7 @@ export class DetalleComponent implements OnInit {
   actualizarDatos(){
     const id = +this.route.snapshot.paramMap.get('id');
     
-    var newInfoList = {surname: "", email: "", address: "", name: "name", customerId: "", id:"", startdate:"", ID_DMS_DOC:"", customertypeid:"", comments:""};
+    var newInfoList = {surname: "", email: "", address: "", name: "name", customerId: "", id:"", startdate:"", customertypeid:"", comments:""};
 
     if (this.onLoadInfo.SURNAME != this.infos[0].SURNAME) {
       newInfoList.surname = '"SURNAME":"' + this.infos[0].SURNAME+'",';
@@ -82,11 +82,6 @@ export class DetalleComponent implements OnInit {
       newInfoList.startdate = '"STARTDATE":' +  this.infos[0].STARTDATE.getTime()+','; //Convierte la fecha a milisegundos
     } else {
       newInfoList.startdate = '';
-    }
-    if (this.onLoadInfo.ID_DMS_DOC != this.infos[0].ID_DMS_DOC) {
-      newInfoList.ID_DMS_DOC = '"ID_DMS_DOC":"' + this.infos[0].ID_DMS_DOC+'",';
-    } else {
-      newInfoList.ID_DMS_DOC = '';
     }
     if (this.onLoadInfo.CUSTOMERTYPEID != this.infos[0].CUSTOMERTYPEID) {
       newInfoList.customertypeid = '"CUSTOMERTYPEID":' + this.infos[0].CUSTOMERTYPEID+',';
@@ -126,7 +121,6 @@ interface Info {
   STARTDATE: Date;
   PHOTO:string;
   COMMENTS:string;
-  ID_DMS_DOC:string;
 }
 
 interface CustomerDataInfoAccount {
