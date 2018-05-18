@@ -29,6 +29,10 @@
   padding: 10px;
 }
 
+.comments mat-form-field {
+  width: 50%;
+}
+
 .list-item p {
   margin: 0px 0px;
 }

@@ -38,7 +38,7 @@ export class BankServiceService {
     let headers = new HttpHeaders();
     headers = headers.append("Authorization", authorization);
     headers = headers.append("Content-Type", "application/json");
-    var body = `{"filter":{"CUSTOMERID":`+id+`},"columns":["CUSTOMERID","ID","STARTDATE","NAME","SURNAME","CUSTOMERTYPEID","PHOTO","ADDRESS","EMAIL","COMMENTS","ID_DMS_DOC"],"sqltypes":{"STARTDATE":91,"PHOTO":2004}}`;
+    var body = `{"filter":{"CUSTOMERID":`+id+`},"columns":["CUSTOMERID","ID","STARTDATE","NAME","SURNAME","CUSTOMERTYPEID","PHOTO","ADDRESS","EMAIL","COMMENTS"],"sqltypes":{"STARTDATE":91,"PHOTO":2004}}`;
     return this.http.post<CustomerResponseInfo>(customersUrl, body, {headers: headers});
   }
 
@@ -48,7 +48,7 @@ export class BankServiceService {
     let headers = new HttpHeaders();
     headers = headers.append("Authorization", authorization);
     headers = headers.append("Content-Type", "application/json");
-    var body = `{"filter":{"CUSTOMERID":`+id+`},"data":{`+newInfoList.surname+newInfoList.email+newInfoList.address+newInfoList.name+newInfoList.id+newInfoList.customerId+newInfoList.startdate+newInfoList.ID_DMS_DOC+newInfoList.customertypeid+newInfoList.comments+`},"sqltypes":{"STARTDATE":91,"PHOTO":2004}}`;
+    var body = `{"filter":{"CUSTOMERID":`+id+`},"data":{`+newInfoList.surname+newInfoList.email+newInfoList.address+newInfoList.name+newInfoList.id+newInfoList.customerId+newInfoList.startdate+newInfoList.customertypeid+newInfoList.comments+`},"sqltypes":{"STARTDATE":91,"PHOTO":2004}}`;
     //console.log(body);
     return this.http.put<CustomerResponseInfo>(guardarUrl, body, {headers: headers});
   }
@@ -58,7 +58,7 @@ export class BankServiceService {
     let headers = new HttpHeaders();
     headers = headers.append("Authorization", authorization);
     headers = headers.append("Content-Type", "application/json");
-    var body = `{"data":{"ID":"`+insertInfoList.id+`","STARTDATE":"`+insertInfoList.startdate+`","NAME":"`+insertInfoList.name+`","SURNAME":"`+insertInfoList.surname+`","ADDRESS":"`+insertInfoList.address+`","COMMENTS":"`+insertInfoList.comments+`","ID_DMS_DOC":"`+insertInfoList.ID_DMS_DOC+`","CUSTOMERTYPEID":"`+insertInfoList.customertypeid+`","PHOTO":"`+insertInfoList.photo+`","EMAIL":"`+insertInfoList.email+`"},"sqltypes":{"STARTDATE":91}}`;
+    var body = `{"data":{"ID":"`+insertInfoList.id+`","STARTDATE":"`+insertInfoList.startdate+`","NAME":"`+insertInfoList.name+`","SURNAME":"`+insertInfoList.surname+`","ADDRESS":"`+insertInfoList.address+`","COMMENTS":"`+insertInfoList.comments+`","CUSTOMERTYPEID":"`+insertInfoList.customertypeid+`","PHOTO":"`+insertInfoList.photo+`","EMAIL":"`+insertInfoList.email+`"},"sqltypes":{"STARTDATE":91}}`;
     //console.log(body);
     return this.http.post<CustomerResponseInsert>(guardarUrl, body, {headers: headers});
   }
@@ -133,7 +133,6 @@ interface CustomerDataInfo {
   STARTDATE: Date;
   PHOTO:string;
   COMMENTS:string;
-  ID_DMS_DOC:string;
 }
 
 interface CustomerResponseInsert {

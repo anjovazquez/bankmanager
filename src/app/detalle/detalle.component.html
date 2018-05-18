@@ -34,13 +34,12 @@
                         <input matInput [matDatepicker]="picker" placeholder="Fecha de salida" [(ngModel)]="info.STARTDATE">
                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
-                    </mat-form-field>                    
-                    <mat-select placeholder="Tipo de cliente" [(ngModel)]="info.CUSTOMERTYPEID">
-                        <mat-option *ngFor="let customerType of customerTypes" [value]="customerType.CUSTOMERTYPEID">{{customerType.DESCRIPTION}}</mat-option>
-                    </mat-select>
+                    </mat-form-field>   
                     <mat-form-field>
-                        <input matInput placeholder="Información" [(ngModel)]="info.ID_DMS_DOC">
-                    </mat-form-field>
+                        <mat-select placeholder="Tipo de cliente" [(ngModel)]="info.CUSTOMERTYPEID">
+                            <mat-option *ngFor="let customerType of customerTypes" [value]="customerType.CUSTOMERTYPEID">{{customerType.DESCRIPTION}}</mat-option>
+                        </mat-select>
+                    </mat-form-field> 
                 </div>
                 <div class="customer-pic">
                     <img src="data:image/png;base64,{{info.PHOTO}}" alt="Avatar" class="avatar" >
